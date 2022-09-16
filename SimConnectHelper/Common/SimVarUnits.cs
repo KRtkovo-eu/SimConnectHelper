@@ -907,7 +907,9 @@ namespace SimConnectHelper.Common
             {"LAUNCHBAR SWITCH",new SimVarDefinition("LAUNCHBAR SWITCH","If this is set to True the launch bar switch has been engaged.","bool",ConvertType("bool"),true,false)},
             {"NUMBER OF CATAPULTS",new SimVarDefinition("NUMBER OF CATAPULTS","Maximum of 4. A model can contain more than 4 catapults, but only the first four will be read and recognized by the simulation.","number",ConvertType("uint32"),true,false)},
             {"SURFACE RELATIVE GROUND SPEED",new SimVarDefinition("SURFACE RELATIVE GROUND SPEED","The speed of the aircraft relative to the speed of the first surface directly underneath it. Use this to retrieve, for example, an aircraft’s taxiing speed while it is moving on a moving carrier. It also applies to airborne aircraft, for example when a helicopter is successfully hovering above a moving ship, this value should be zero. The returned value will be the same as GROUND VELOCITY if the first surface beneath it is not moving.","feet_per_second",null,true,false)},
-            {"TAILHOOK HANDLE",new SimVarDefinition("TAILHOOK HANDLE","True if the tailhook handle is engaged.","bool",ConvertType("bool"),true,false)}
+            {"TAILHOOK HANDLE",new SimVarDefinition("TAILHOOK HANDLE","True if the tailhook handle is engaged.","bool",ConvertType("bool"),true,false)},
+            {"ZULU TIME",new SimVarDefinition("ZULU TIME", "Simulator UTC time.","seconds",ConvertType("float64"),true,false)},
+            {"LOCAL TIME",new SimVarDefinition("LOCAL TIME", "Simulator local time.","seconds",ConvertType("float64"),true,false)}
         };
 
         private static Type ConvertType(string simVarType)

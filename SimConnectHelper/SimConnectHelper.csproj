@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Library</OutputType>
@@ -29,21 +29,17 @@
 
   <ItemGroup>
     <Reference Include="Microsoft.FlightSimulator.SimConnect">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <HintPath>.\Microsoft.FlightSimulator.SimConnect.dll</HintPath>
     </Reference>
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include=".\Microsoft.FlightSimulator.SimConnect.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <Pack>true</Pack>
-      <PackagePath>lib\$(TargetFramework)</PackagePath>
-    </Content>
-    <Content Include=".\SimConnect.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <Pack>true</Pack>
-      <PackagePath>lib\$(TargetFramework)</PackagePath>
-    </Content>
+    <None Update="Microsoft.FlightSimulator.SimConnect.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SimConnect.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>
