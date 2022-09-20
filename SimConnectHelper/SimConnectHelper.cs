@@ -919,5 +919,16 @@ namespace SimConnectHelper
                 }
                 catch { }
         }
+        
+        public static SimConnectVariable GetSimConnectVariableObject(string variableName)
+        {
+            var result = SimVarUnits.DefaultUnits.FirstOrDefault(x => x.Key == variableName);
+            SimVarDefinition SelectedVariable = result.Value;
+            return new SimConnectVariable()
+            {
+                Name = result.Key,
+                Unit = SelectedVariable.DefaultUnit
+            };
+        }
     }
 }
